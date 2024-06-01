@@ -38,7 +38,7 @@ body {
 }
 
 .header{
-   justify-self:center ;
+    justify-self:center ;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,40 @@ body {
     border-radius: 15px;
     transition: .5s;
     background-color: darkcyan;
-    color: white;
+
 }
 
-    
+.loader{
+    transition: .5s;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border : 3px solid white;
+    border-radius: 100%;
+}
+
+.mainContent:hover > .loader {
+    transition: .5s;
+    width: 100px;
+    height: 100px;
+    border: 3px dashed white;
+    animation: spin 1s infinite linear;
+}
+
+.mainContent:hover > .loader h2{
+    transition: .5s;
+    transform: scale(0);
+}
+
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
